@@ -32,7 +32,7 @@ interface CategoriesProps {
 }
 
 // Bundle data for each category
-const getBundlesForCategory = (category: string, providerName: string): Bundle[] => {
+const getBundlesForCategory = (category: string): Bundle[] => {
   if (category === 'Anfac Plus') {
     return [
       { id: '1', size: '500 MB', validity: '1 Day', discount: 15, originalPrice: 1.00, discountedPrice: 0.85 },
@@ -65,7 +65,7 @@ const getBundlesForCategory = (category: string, providerName: string): Bundle[]
 };
 
 function Categories({ provider, category, setScreen, setSelectedBundle }: CategoriesProps) {
-  const bundles = getBundlesForCategory(category, provider.name);
+  const bundles = getBundlesForCategory(category);
 
   const handleBundleSelect = (bundle: Bundle) => {
     setSelectedBundle({

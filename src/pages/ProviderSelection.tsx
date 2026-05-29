@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { Screen } from '../types';
 
 interface Provider {
