@@ -1,10 +1,11 @@
 import { useRef, useEffect } from 'react';
 import brandLogo from '../assets/logo.png';
+import type { Screen } from '../App';
 
 interface LoginProps {
   phone: string;
   setPhone: (phone: string) => void;
-  setScreen: (screen: 'login' | 'otp' | 'home') => void;
+  setScreen: (screen: Screen) => void;
 }
 
 function Login({ phone, setPhone, setScreen }: LoginProps) {

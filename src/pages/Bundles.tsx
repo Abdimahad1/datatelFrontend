@@ -1,3 +1,5 @@
+import type { Screen } from '../App';
+
 interface Provider {
   id: number;
   name: string;
@@ -16,7 +18,7 @@ interface Bundle {
 interface BundlesProps {
   provider: Provider;
   bundle: Bundle;
-  setScreen: (screen: string) => void;
+  setScreen: (screen: Screen) => void;
 }
 
 function Bundles({ provider, bundle, setScreen }: BundlesProps) {

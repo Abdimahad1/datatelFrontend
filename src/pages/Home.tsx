@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { theme } from '../styles/theme';
+import type { Screen } from '../App';
 
 import hormuudLogo from '../assets/hormuud.png';
 import somnetLogo from '../assets/somnet.png';
@@ -17,7 +17,7 @@ interface Provider {
 }
 
 interface HomeProps {
-  setScreen: (screen: string) => void;
+  setScreen: (screen: Screen) => void;
   setSelectedProvider: (provider: Provider) => void;
 }
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { theme } from '../styles/theme';
+import type { Screen } from '../App';
 
 interface Provider {
   id: number;
@@ -9,7 +9,7 @@ interface Provider {
 
 interface ProviderSelectionProps {
   provider: Provider;
-  setScreen: (screen: string) => void;
+  setScreen: (screen: Screen) => void;
   setSelectedCategory: (category: string) => void;
 }
 
@@ -21,14 +21,9 @@ const categories = [
 ];
 
 function ProviderSelection({ provider, setScreen, setSelectedCategory }: ProviderSelectionProps) {
-  const [selectedCat, setSelectedCat] = useState<string>('');
-
   const handleCategorySelect = (categoryName: string) => {
-    setSelectedCat(categoryName);
-    setTimeout(() => {
-      setSelectedCategory(categoryName);
-      setScreen('categories');
-    }, 200);
+    setSelectedCategory(categoryName);
+    setScreen('categories');
   };
 
   return (

@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import brandLogo from '../assets/logo.png';
-import { theme } from '../styles/theme';
+import type { Screen } from '../App';
 
 interface OtpProps {
   phone: string;
-  setScreen: (screen: 'login' | 'otp' | 'home') => void;
+  setScreen: (screen: Screen) => void;
 }
 
 function Otp({ phone, setScreen }: OtpProps) {

@@ -1,3 +1,5 @@
+import type { Screen } from '../App';
+
 interface Provider {
   id: number;
   name: string;
@@ -13,11 +15,20 @@ interface Bundle {
   discountedPrice: number;
 }
 
+interface SelectedBundle {
+  name: string;
+  size: string;
+  validity: string;
+  originalPrice: number;
+  discountedPrice: number;
+  discount: number;
+}
+
 interface CategoriesProps {
   provider: Provider;
   category: string;
-  setScreen: (screen: string) => void;
-  setSelectedBundle: (bundle: any) => void;
+  setScreen: (screen: Screen) => void;
+  setSelectedBundle: (bundle: SelectedBundle) => void;
 }
 
 // Bundle data for each category

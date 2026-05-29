@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { Screen } from '../App';
 
 interface Provider {
   id: number;
@@ -18,7 +19,7 @@ interface Bundle {
 interface PaymentProps {
   provider: Provider;
   bundle: Bundle;
-  setScreen: (screen: string) => void;
+  setScreen: (screen: Screen) => void;
 }
 
 interface PaymentMethod {

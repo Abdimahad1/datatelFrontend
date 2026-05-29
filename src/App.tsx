@@ -8,7 +8,7 @@ import Bundles from './pages/Bundles';
 import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
 
-type Screen = 'login' | 'otp' | 'home' | 'providerSelection' | 'categories' | 'bundles' | 'payment' | 'paymentSuccess';
+export type Screen = 'login' | 'otp' | 'home' | 'providerSelection' | 'categories' | 'bundles' | 'payment' | 'paymentSuccess';
 
 interface SelectedProvider {
   id: number;

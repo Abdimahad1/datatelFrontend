@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react';
+import type { Screen } from '../App';
 
 interface Provider {
   id: number;
@@ -18,7 +19,7 @@ interface Bundle {
 interface PaymentSuccessProps {
   provider: Provider;
   bundle: Bundle;
-  setScreen: (screen: string) => void;
+  setScreen: (screen: Screen) => void;
 }
 
 function PaymentSuccess({ provider, bundle, setScreen }: PaymentSuccessProps) {
