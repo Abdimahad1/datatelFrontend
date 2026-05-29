@@ -7,30 +7,14 @@ import Categories from './pages/Categories';
 import Bundles from './pages/Bundles';
 import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
-
-export type Screen = 'login' | 'otp' | 'home' | 'providerSelection' | 'categories' | 'bundles' | 'payment' | 'paymentSuccess';
-
-interface SelectedProvider {
-  id: number;
-  name: string;
-  logo: string;
-}
-
-interface SelectedBundle {
-  name: string;
-  size: string;
-  validity: string;
-  originalPrice: number;
-  discountedPrice: number;
-  discount: number;
-}
+import type { Screen, Provider, Bundle } from './types';
 
 function App() {
   const [screen, setScreen] = useState<Screen>('login');
   const [phone, setPhone] = useState<string>('');
-  const [selectedProvider, setSelectedProvider] = useState<SelectedProvider | null>(null);
+  const [selectedProvider, setSelectedProvider] = useState<Provider | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
-  const [selectedBundle, setSelectedBundle] = useState<SelectedBundle | null>(null);
+  const [selectedBundle, setSelectedBundle] = useState<Bundle | null>(null);
 
   return (
     <div className="App">

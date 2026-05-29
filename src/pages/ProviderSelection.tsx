@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Screen } from '../App';
+import type { Screen } from '../types';
 
 interface Provider {
   id: number;

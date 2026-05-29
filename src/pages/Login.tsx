@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import brandLogo from '../assets/logo.png';
-import type { Screen } from '../App';
+import type { Screen } from '../types';
 
 interface LoginProps {
   phone: string;
