@@ -1,19 +1,8 @@
-import type { Screen } from '../types';
+import type { Bundle, Provider, Screen } from '../types';
 
-interface Provider {
-  id: number;
-  name: string;
-  logo: string;
-}
 
-interface Bundle {
-  name: string;
-  size: string;
-  validity: string;
-  originalPrice: number;
-  discountedPrice: number;
-  discount: number;
-}
+
+
 
 interface BundlesProps {
   provider: Provider;

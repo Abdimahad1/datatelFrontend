@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import type { Screen, Provider } from '../types';
 
-import hormuudLogo from './assets/hormuud.png';
-import somnetLogo from './assets/somnet.png';
-import somtelLogo from './assets/somtel.png';
-import amtelLogo from './assets/amtel.png';
-import somlinkLogo from './assets/somlink.png';
-import golisLogo from './assets/golis.png';
-import durdurLogo from './assets/durdur.png';
-import telesomLogo from './assets/telesom.png';
+import hormuudLogo from '../assets/hormuud.png';
+import somnetLogo from '../assets/somnet.png';
+import somtelLogo from '../assets/somtel.png';
+import amtelLogo from '../assets/amtel.png';
+import somlinkLogo from '../assets/somlink.png';
+import golisLogo from '../assets/golis.png';
+import durdurLogo from '../assets/durdur.png';
+import telesomLogo from '../assets/telesom.png';
 
 interface HomeProps {
   setScreen: (screen: Screen) => void;
